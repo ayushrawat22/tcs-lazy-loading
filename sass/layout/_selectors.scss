@@ -5,7 +5,7 @@
 @use '../abstracts/mixins' as *;
 
 .selectors{
-    border-bottom: 2px solid $white;
+    border-bottom: 2px solid $grey-200;
 
     &__wrapper{
     margin: px_to_rem(14px) px_to_rem(100px);
