@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tcs-ayush</title>
+    <link rel="stylesheet" href="/dist/css/main.css" />
+  </head>
+  <body class="pages">
+    <header>
+      <nav>
+        <div class="nav__wrapper">
+          <div class="nav__wrapper--logo">
+            <img class="nav__wrapper--logo-img" src="./assets/tcs logo.svg" alt="tcs logo">
+          </div>
+
+          <div class="nav__wrapper--leftlinks">
+          <ul class="nav__wrapper--leftlinks-list">
+            <li><a class="nav__wrapper--leftlinks-list-content" href="#">What we do</a></li>
+            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Who we are</a></li>
+            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Insights</a></li>
+            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Career</a></li>
+            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Investors</a></li>
+          </ul>   
+          </div>
+
+          <div class="nav__wrapper--rightcontent">
+            <ul class="nav__wrapper--rightcontent-list">
+              <li><a class="nav__wrapper--rightcontent-list-content" href="#">Contact us</a></li>
+              <li><a class="nav__wrapper--rightcontent-list-content" href="#">TCS WORLDWIDE</a></li>
+            </ul>
+            <button class="nav__wrapper--rightcontent-search" aria-label="Open search">
+              <img class="nav__wrapper--rightcontent-search-img" src="./assets/search-icon.svg" alt="search icon">
+            </button>
+            <img class="nav__wrapper--rightcontent-tata" src="./assets/tata logo.svg" alt="tata logo">
+          </div>
+
+        </div>
+
+        <div class="nav__search">
+          <div class="nav__search-inner">
+            <img class="nav__search-icon" src="./assets/search-icon.svg" alt="search">
+            <input class="nav__search-input" type="text" placeholder="What are you looking for?">
+            <button class="nav__search-close" aria-label="Close search">X</button>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <section class="selectors">
+      <div class="selectors__wrapper">
+        <li class="selectors__wrapper--cta">All</li>
+        <li class="selectors__wrapper--cta">Research</li>
+        <li class="selectors__wrapper--cta">News</li>
+        <li class="selectors__wrapper--cta">Production</li>
+        <li class="selectors__wrapper--cta">Blog</li>
+      </div>
+    </section>
+
+    <!-- watched a yt tutorial to understand lazyloading -->
+
+    <section class="cards">  
+      <div class="cards__load" id="cardsload"></div>
+      <div class="cards__observer" id="cardsObserver"></div>
+    </section>
+  <script src="./script.js"></script>
+  </body>
+  </html>

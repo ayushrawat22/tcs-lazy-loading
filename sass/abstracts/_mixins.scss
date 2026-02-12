@@ -1,0 +1,18 @@
+@use './functions' as *;
+@use './variables' as *;
+@use './colors' as *;
+
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: px_to_rem(40px);
+}
+
+
