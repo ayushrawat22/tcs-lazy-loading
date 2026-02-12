@@ -37,4 +37,36 @@
         }
     }
 }
+
+  @include media_query('md') {
+    &__wrapper {
+      margin: px_to_rem(12px) px_to_rem(16px);
+      gap: px_to_rem(12px);
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &--cta {
+        width: auto;
+        padding: px_to_rem(6px) px_to_rem(14px);
+        font-size: px_to_rem(14px);
+        height: auto;
+      }
+    }
+  }
+
+  @include media_query('sm') {
+    &__wrapper {
+      margin: px_to_rem(10px) px_to_rem(12px);
+      gap: px_to_rem(8px);
+      justify-content: center;
+      flex-wrap: wrap;
+
+      &--cta {
+        padding: px_to_rem(6px) px_to_rem(10px);
+        font-size: px_to_rem(13px);
+        height: auto;
+        min-width: px_to_rem(80px);
+      }
+    }
+  }
 }

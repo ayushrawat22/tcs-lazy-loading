@@ -15,6 +15,7 @@
         transform: translateX(-50%) translateY(0);
         pointer-events: auto;
         transition: visibility 0s 0s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: auto;
     }
 
     &__content {

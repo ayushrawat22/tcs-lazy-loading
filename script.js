@@ -3,6 +3,104 @@ const searchBar = document.querySelector('.nav__search');
 const closeButton = document.querySelector('.nav__search-close');
 const searchInput = document.querySelector('.nav__search-input');
 
+// Hamburger / sidebar toggle
+const hamburger = document.querySelector('.nav__wrapper--hamburger');
+const sidebar = document.querySelector('.nav__sidebar');
+const overlay = document.querySelector('.nav__overlay');
+
+function toggleSidebar() {
+  const opening = !sidebar.classList.contains('is-open');
+  hamburger.classList.toggle('is-active');
+  sidebar.classList.toggle('is-open');
+  overlay.classList.toggle('is-open');
+
+  if (opening) document.body.classList.add('no-scroll');
+  else if (!modal.classList.contains('is-open')) document.body.classList.remove('no-scroll');
+}
+
+if (hamburger) {
+  hamburger.addEventListener('click', toggleSidebar);
+}
+if (overlay) {
+  overlay.addEventListener('click', toggleSidebar);
+}
+
+const sidebarItems = document.querySelectorAll('.nav__sidebar-list-item');
+sidebarItems.forEach(item => {
+  const link = item.querySelector('.nav__sidebar-list-link');
+  const sub = item.querySelector('.nav__sidebar-sub');
+  if (!link || !sub) return;
+
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    sidebarItems.forEach(other => {
+      if (other !== item && other.classList.contains('is-expanded')) {
+        other.classList.remove('is-expanded');
+        const otherSub = other.querySelector('.nav__sidebar-sub');
+        if (otherSub) otherSub.style.maxHeight = null;
+        other.querySelectorAll('.nav__sidebar-sub-item.is-expanded').forEach(si => {
+          si.classList.remove('is-expanded');
+          const sc = si.querySelector('.nav__sidebar-sub-content');
+          if (sc) sc.style.maxHeight = null;
+        });
+      }
+    });
+
+    // toggle current
+    item.classList.toggle('is-expanded');
+    if (item.classList.contains('is-expanded')) {
+      sub.style.maxHeight = sub.scrollHeight + 'px';
+    } else {
+      // collapse all sub-items inside
+      item.querySelectorAll('.nav__sidebar-sub-item.is-expanded').forEach(si => {
+        si.classList.remove('is-expanded');
+        const sc = si.querySelector('.nav__sidebar-sub-content');
+        if (sc) sc.style.maxHeight = null;
+      });
+      sub.style.maxHeight = null;
+    }
+  });
+});
+
+
+const subItems = document.querySelectorAll('.nav__sidebar-sub-item');
+subItems.forEach(subItem => {
+  const subLink = subItem.querySelector('.nav__sidebar-sub-link');
+  const subContent = subItem.querySelector('.nav__sidebar-sub-content');
+  if (!subLink || !subContent) return;
+
+  subLink.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const parentSub = subItem.closest('.nav__sidebar-sub');
+
+    parentSub.querySelectorAll('.nav__sidebar-sub-item').forEach(sibling => {
+      if (sibling !== subItem && sibling.classList.contains('is-expanded')) {
+        sibling.classList.remove('is-expanded');
+        const sc = sibling.querySelector('.nav__sidebar-sub-content');
+        if (sc) sc.style.maxHeight = null;
+      }
+    });
+
+    subItem.classList.toggle('is-expanded');
+    if (subItem.classList.contains('is-expanded')) {
+      subContent.style.maxHeight = subContent.scrollHeight + 'px';
+    } else {
+      subContent.style.maxHeight = null;
+    }
+
+    if (parentSub) {
+      parentSub.style.maxHeight = parentSub.scrollHeight + 'px';
+      setTimeout(() => {
+        if (parentSub.closest('.nav__sidebar-list-item')?.classList.contains('is-expanded')) {
+          parentSub.style.maxHeight = parentSub.scrollHeight + 'px';
+        }
+      }, 350);
+    }
+  });
+});
+
 // Modal dropdown functionality
 const whatWeDoLink = document.querySelector('.nav__wrapper--leftlinks-list-item--hasdropdown');
 const whoNav = document.querySelector('[data-dropdown="who"]');
@@ -16,10 +114,12 @@ let currentModal = 'what'; // used this to track which nav section is active
 
 function openModal() {
   modal.classList.add('is-open');
+  document.body.classList.add('no-scroll');
 }
 
 function closeModal() {
   modal.classList.remove('is-open');
+  if (!document.querySelector('.nav__sidebar.is-open')) document.body.classList.remove('no-scroll');
 }
 
 function showLeft(modalName) {
@@ -51,7 +151,6 @@ function scheduleRestore(delay = 180) {
   }, delay);
 }
 
-// left item hover → swap visible right pane
 document.querySelectorAll('.modal__content-left-list-item').forEach(li => {
   li.addEventListener('mouseenter', () => {
     clearTimeout(hoverTimer);
