@@ -7,7 +7,7 @@
 
 .pages {
   background-color: $grey-200;
-  padding-top: px_to_rem(120px);
+  padding-top: px_to_rem(90px);
 
   @include media_query('md') {
     padding-top: px_to_rem(100px);
