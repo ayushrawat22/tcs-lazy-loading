@@ -2,8 +2,9 @@
 @use './variables' as *;
 @use './colors' as *;
 @use './mixins' as *;
+
 //initially written on laptop in my laptop it is looking good
-$breakpoint-md: 1344px; //checked responsiveness on ipad it is working fine
+$breakpoint-md: 1200px; //checked responsiveness on ipad it is working fine
 $breakpoint-sm: 576px;// checked on phone, working fine
 
 

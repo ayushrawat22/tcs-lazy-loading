@@ -8,7 +8,7 @@
     border-bottom: 2px solid $white;
 
     &__wrapper{
-    margin: px_to_rem(14px) px_to_rem(150px);
+    margin: px_to_rem(14px) px_to_rem(100px);
     @include center;
     justify-content: space-around;
     gap: px_to_rem(100px);
