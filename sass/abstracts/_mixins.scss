@@ -15,4 +15,19 @@
     gap: px_to_rem(40px);
 }
 
+@mixin modal-pop-up {
+    position: fixed;
+    top: px_to_rem(80px);
+    left: 50%;
+    width: 80vw;
+    height: px_to_rem(500px);
+    background: $grey-300;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%) translateY(px_to_rem(-20px));
+    pointer-events: none;
+    transition: visibility 0s 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 

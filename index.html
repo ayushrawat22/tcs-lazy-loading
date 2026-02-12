@@ -8,7 +8,7 @@
   </head>
   <body class="pages">
     <header>
-      <nav>
+      <nav class="nav">
         <div class="nav__wrapper">
           <div class="nav__wrapper--logo">
             <img class="nav__wrapper--logo-img" src="./assets/tcs logo.svg" alt="tcs logo">
@@ -16,11 +16,11 @@
 
           <div class="nav__wrapper--leftlinks">
           <ul class="nav__wrapper--leftlinks-list">
-            <li><a class="nav__wrapper--leftlinks-list-content" href="#">What we do</a></li>
-            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Who we are</a></li>
-            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Insights</a></li>
-            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Career</a></li>
-            <li><a class="nav__wrapper--leftlinks-list-content" href="#">Investors</a></li>
+            <li class="nav__wrapper--leftlinks-list-item nav__wrapper--leftlinks-list-item--hasdropdown"><a class="nav__wrapper--leftlinks-list-content" href="#">What we do</a></li>
+            <li class="nav__wrapper--leftlinks-list-item" data-dropdown="who"><a class="nav__wrapper--leftlinks-list-content" href="#">Who we are</a></li>
+            <li class="nav__wrapper--leftlinks-list-item" data-dropdown="insights"><a class="nav__wrapper--leftlinks-list-content" href="#">Insights</a></li>
+            <li class="nav__wrapper--leftlinks-list-item" data-dropdown="careers"><a class="nav__wrapper--leftlinks-list-content" href="#">Career</a></li>
+            <li class="nav__wrapper--leftlinks-list-item"><a class="nav__wrapper--leftlinks-list-content" href="#">Investors</a></li>
           </ul>   
           </div>
 
@@ -45,6 +45,352 @@
           </div>
         </div>
 
+        <section class="modal">
+          <div class="modal__content">
+
+              <!-- "What we do" left sidebar -->
+              <div class="modal__content-left is-active" data-modal="what">
+                  <ul class="modal__content-left-list">
+                      <li class="modal__content-left-list-item" data-view="overview"><span class="modal__content-left-list-item-text">Overview</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="industries"><span class="modal__content-left-list-item-text">Industries</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="services"><span class="modal__content-left-list-item-text">Services</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="products"><span class="modal__content-left-list-item-text">Products and Platforms</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="research"><span class="modal__content-left-list-item-text">Research &amp; Innovation</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                  </ul>
+              </div>
+
+              <!-- "Who we are" left sidebar -->
+              <div class="modal__content-left" data-modal="who">
+                  <ul class="modal__content-left-list">
+                      <li class="modal__content-left-list-item" data-view="who-overview"><span class="modal__content-left-list-item-text">Overview</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="about-us"><span class="modal__content-left-list-item-text">About Us</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="leadership"><span class="modal__content-left-list-item-text">Leadership</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="in-the-news"><span class="modal__content-left-list-item-text">In the news</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                  </ul>
+              </div>
+
+              <!-- "Insights" left sidebar -->
+              <div class="modal__content-left" data-modal="insights">
+                  <ul class="modal__content-left-list">
+                      <li class="modal__content-left-list-item" data-view="insights-overview"><span class="modal__content-left-list-item-text">Overview</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="customer-stories"><span class="modal__content-left-list-item-text">Customer Stories</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="perspectives"><span class="modal__content-left-list-item-text">Perspectives</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="topics"><span class="modal__content-left-list-item-text">Topics</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                  </ul>
+              </div>
+
+              <!-- Right: What we do – Overview (default) -->
+              <div class="modal__content--right is-active" data-view="overview">
+                  <h2 class="modal__content--right-heading">TCS is here to make a difference through technology.</h2>
+                  <p class="modal__content--right-para">Leading the way in innovation for over 50 years, we build greater futures for businesses across multiple industries and 131 countries.</p>
+                  <button class="modal__content--right-button">Discover all solutions</button>
+              </div>
+
+              <!-- Right: Industries -->
+              <div class="modal__content--right is-grid" data-view="industries">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Banking</a>
+                          <a class="modal__industries-link" href="#">Capital Markets</a>
+                          <a class="modal__industries-link" href="#">Consumer Goods and Distribution</a>
+                          <a class="modal__industries-link" href="#">Communications, Media, and Information Services</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Education</a>
+                          <a class="modal__industries-link" href="#">Energy, Resources, and Utilities</a>
+                          <a class="modal__industries-link" href="#">Healthcare</a>
+                          <a class="modal__industries-link" href="#">High Tech</a>
+                          <a class="modal__industries-link" href="#">Insurance</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Life Sciences</a>
+                          <a class="modal__industries-link" href="#">Manufacturing</a>
+                          <a class="modal__industries-link" href="#">Public Services</a>
+                          <a class="modal__industries-link" href="#">Retail</a>
+                          <a class="modal__industries-link" href="#">Travel and Logistics</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Services -->
+              <div class="modal__content--right is-grid" data-view="services">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Cloud</a>
+                          <a class="modal__industries-link" href="#">Cognitive Business Operations</a>
+                          <a class="modal__industries-link" href="#">Consulting</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Cybersecurity</a>
+                          <a class="modal__industries-link" href="#">Data and Analytics</a>
+                          <a class="modal__industries-link" href="#">Enterprise Solutions</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">IoT and Digital Engineering</a>
+                          <a class="modal__industries-link" href="#">TCS Interactive</a>
+                          <a class="modal__industries-link" href="#">Sustainability Services</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Products and Platforms -->
+              <div class="modal__content--right is-grid" data-view="products">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">TCS ADD&trade;</a>
+                          <a class="modal__industries-link" href="#">TCS BANCS&trade;</a>
+                          <a class="modal__industries-link" href="#">TCS BFSI Platforms</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">TCS CHROMA&trade;</a>
+                          <a class="modal__industries-link" href="#">TCS CHROMA&trade; (Analytics)</a>
+                          <a class="modal__industries-link" href="#">TCS Customer Service</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">TCS Interactive</a>
+                          <a class="modal__industries-link" href="#">TCS MasterCraft&trade;</a>
+                          <a class="modal__industries-link" href="#">Other Platforms</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Research & Innovation -->
+              <div class="modal__content--right is-grid" data-view="research">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">TCS Research</a>
+                          <a class="modal__industries-link" href="#">TCS Pace&trade;</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Who we are – Overview (default) -->
+              <div class="modal__content--right" data-view="who-overview">
+                  <h2 class="modal__content--right-heading">We are in it for good, driving positive change for the benefit of all.</h2>
+                  <p class="modal__content--right-para">Our expert, committed team put our shared beliefs into action &ndash; every day. Together, we combine innovation and collective knowledge to create the extraordinary.</p>
+                  <button class="modal__content--right-button">Discover the difference</button>
+              </div>
+
+              <!-- Right: About Us -->
+              <div class="modal__content--right is-grid" data-view="about-us">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Corporate Sustainability</a>
+                          <a class="modal__industries-link" href="#">Diversity, Equity, and Inclusion</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Corporate Social Responsibility</a>
+                          <a class="modal__industries-link" href="#">The TCS Way</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Sports Sponsorships</a>
+                          <a class="modal__industries-link" href="#">Alliances</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: In the news -->
+              <div class="modal__content--right" data-view="in-the-news">
+                  <h3 class="modal__news-heading">RECENT NEWS</h3>
+                  <div class="modal__news-list">
+                      <article class="modal__news-item">
+                          <span class="modal__news-date">13 Mar 2023</span>
+                          <a class="modal__news-title" href="#">TCS Debuts on Forbes List of America’s Best Large Employers</a>
+                      </article>
+                      <article class="modal__news-item">
+                          <span class="modal__news-date">06 Mar 2023</span>
+                          <a class="modal__news-title" href="#">TCS Named a Top Employer in the UAE, Saudi Arabia and South Africa</a>
+                      </article>
+                  </div>
+                  <a class="modal__news-viewall" href="#">View All</a>
+              </div>
+
+              <!-- Right: Insights – Overview (default) -->
+              <div class="modal__content--right" data-view="insights-overview">
+                  <h2 class="modal__content--right-heading">Extraordinary expertise leads to remarkable results.</h2>
+                  <p class="modal__content--right-para">We share news, insights, analysis and research &ndash; tailored to your unique interests &ndash; to help you deepen your knowledge and impact.</p>
+                  <button class="modal__content--right-button">Discover Expert Insights</button>
+              </div>
+
+              <!-- Right: Insights – Topics -->
+              <div class="modal__content--right is-grid" data-view="topics">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Insights</a>
+                          <a class="modal__industries-link" href="#">Metaverse</a>
+                          <a class="modal__industries-link" href="#">Sustainability</a>
+                          <a class="modal__industries-link" href="#">Cybersecurity</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">AI &amp; ML</a>
+                          <a class="modal__industries-link" href="#">Blockchain</a>
+                          <a class="modal__industries-link" href="#">Cloud</a>
+                          <a class="modal__industries-link" href="#">Future of Work</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Health &amp; Wellness</a>
+                          <a class="modal__industries-link" href="#">IoT</a>
+                          <a class="modal__industries-link" href="#">Data Analytics and Storage</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- "Careers" left sidebar -->
+              <div class="modal__content-left" data-modal="careers">
+                  <ul class="modal__content-left-list">
+                      <li class="modal__content-left-list-item" data-view="careers-overview"><span class="modal__content-left-list-item-text">Overview</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="careers-india"><span class="modal__content-left-list-item-text">India</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="careers-americas"><span class="modal__content-left-list-item-text">Americas</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="careers-asia-pacific"><span class="modal__content-left-list-item-text">Asia Pacific</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="careers-europe-uk"><span class="modal__content-left-list-item-text">Europe and UK</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                      <li class="modal__content-left-list-item" data-view="careers-mea"><span class="modal__content-left-list-item-text">Middle East and Africa</span><span class="modal__content-left-list-item-icon"><img class="modal__content-left-list-item-icon-img" src="./assets/angle-right-svgrepo-com.svg"></span></li>
+                  </ul>
+              </div>
+
+              <!-- Right: Careers – Overview (default) -->
+              <div class="modal__content--right" data-view="careers-overview">
+                  <h2 class="modal__content--right-heading">Want to be a global change-maker? Join our team.</h2>
+                  <p class="modal__content--right-para">At TCS, we believe exceptional work begins with hiring, celebrating and nurturing the best people &mdash; from all walks of life.</p>
+                  <button class="modal__content--right-button">Join Us</button>
+              </div>
+
+              <!-- Right: Careers – India -->
+              <div class="modal__content--right is-grid" data-view="careers-india">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Andhra Pradesh</a>
+                          <a class="modal__industries-link" href="#">Arunachal Pradesh</a>
+                          <a class="modal__industries-link" href="#">Assam</a>
+                          <a class="modal__industries-link" href="#">Bihar</a>
+                          <a class="modal__industries-link" href="#">Chhattisgarh</a>
+                          <a class="modal__industries-link" href="#">Goa</a>
+                          <a class="modal__industries-link" href="#">Gujarat</a>
+                          <a class="modal__industries-link" href="#">Haryana</a>
+                          <a class="modal__industries-link" href="#">Himachal Pradesh</a>
+                          <a class="modal__industries-link" href="#">Jharkhand</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Karnataka</a>
+                          <a class="modal__industries-link" href="#">Kerala</a>
+                          <a class="modal__industries-link" href="#">Madhya Pradesh</a>
+                          <a class="modal__industries-link" href="#">Maharashtra</a>
+                          <a class="modal__industries-link" href="#">Manipur</a>
+                          <a class="modal__industries-link" href="#">Meghalaya</a>
+                          <a class="modal__industries-link" href="#">Mizoram</a>
+                          <a class="modal__industries-link" href="#">Nagaland</a>
+                          <a class="modal__industries-link" href="#">Odisha</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Punjab</a>
+                          <a class="modal__industries-link" href="#">Rajasthan</a>
+                          <a class="modal__industries-link" href="#">Sikkim</a>
+                          <a class="modal__industries-link" href="#">Tamil Nadu</a>
+                          <a class="modal__industries-link" href="#">Telangana</a>
+                          <a class="modal__industries-link" href="#">Tripura</a>
+                          <a class="modal__industries-link" href="#">Uttar Pradesh</a>
+                          <a class="modal__industries-link" href="#">Uttarakhand</a>
+                          <a class="modal__industries-link" href="#">West Bengal</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Careers – Americas -->
+              <div class="modal__content--right is-grid" data-view="careers-americas">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Argentina</a>
+                          <a class="modal__industries-link" href="#">Brazil</a>
+                          <a class="modal__industries-link" href="#">Canada</a>
+                          <a class="modal__industries-link" href="#">Chile</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Colombia</a>
+                          <a class="modal__industries-link" href="#">Ecuador</a>
+                          <a class="modal__industries-link" href="#">Mexico</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Peru</a>
+                          <a class="modal__industries-link" href="#">Uruguay</a>
+                          <a class="modal__industries-link" href="#">USA</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Careers – Asia Pacific -->
+              <div class="modal__content--right is-grid" data-view="careers-asia-pacific">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Australia</a>
+                          <a class="modal__industries-link" href="#">China</a>
+                          <a class="modal__industries-link" href="#">Hong Kong</a>
+                          <a class="modal__industries-link" href="#">Indonesia</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Japan</a>
+                          <a class="modal__industries-link" href="#">Malaysia</a>
+                          <a class="modal__industries-link" href="#">New Zealand</a>
+                          <a class="modal__industries-link" href="#">Philippines</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Republic of Korea</a>
+                          <a class="modal__industries-link" href="#">Singapore</a>
+                          <a class="modal__industries-link" href="#">Taiwan</a>
+                          <a class="modal__industries-link" href="#">Thailand</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Careers – Europe and UK -->
+              <div class="modal__content--right is-grid" data-view="careers-europe-uk">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Belgium</a>
+                          <a class="modal__industries-link" href="#">Denmark</a>
+                          <a class="modal__industries-link" href="#">Estonia</a>
+                          <a class="modal__industries-link" href="#">Finland</a>
+                          <a class="modal__industries-link" href="#">France</a>
+                          <a class="modal__industries-link" href="#">Hungary</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Ireland</a>
+                          <a class="modal__industries-link" href="#">Italy</a>
+                          <a class="modal__industries-link" href="#">Luxembourg</a>
+                          <a class="modal__industries-link" href="#">Netherlands</a>
+                          <a class="modal__industries-link" href="#">Norway</a>
+                          <a class="modal__industries-link" href="#">Poland</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Portugal</a>
+                          <a class="modal__industries-link" href="#">Spain</a>
+                          <a class="modal__industries-link" href="#">Sweden</a>
+                          <a class="modal__industries-link" href="#">Switzerland</a>
+                          <a class="modal__industries-link" href="#">United Kingdom</a>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Right: Careers – Middle East and Africa -->
+              <div class="modal__content--right is-grid" data-view="careers-mea">
+                  <div class="modal__industries-grid">
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Bahrain</a>
+                          <a class="modal__industries-link" href="#">Israel</a>
+                          <a class="modal__industries-link" href="#">Kuwait</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">Qatar</a>
+                          <a class="modal__industries-link" href="#">Saudi Arabia</a>
+                      </div>
+                      <div class="modal__industries-col">
+                          <a class="modal__industries-link" href="#">South Africa</a>
+                          <a class="modal__industries-link" href="#">United Arab Emirates</a>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+        </section>
+
       </nav>
     </header>
     <section class="selectors">
@@ -63,6 +409,7 @@
       <div class="cards__load" id="cardsload"></div>
       <div class="cards__observer" id="cardsObserver"></div>
     </section>
+
   <script src="./script.js"></script>
   </body>
   </html>

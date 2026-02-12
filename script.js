@@ -3,6 +3,148 @@ const searchBar = document.querySelector('.nav__search');
 const closeButton = document.querySelector('.nav__search-close');
 const searchInput = document.querySelector('.nav__search-input');
 
+// Modal dropdown functionality
+const whatWeDoLink = document.querySelector('.nav__wrapper--leftlinks-list-item--hasdropdown');
+const whoNav = document.querySelector('[data-dropdown="who"]');
+const insightsNav = document.querySelector('[data-dropdown="insights"]');
+const careersNav = document.querySelector('[data-dropdown="careers"]');
+const modal = document.querySelector('.modal');
+const allLeftPanels = document.querySelectorAll('.modal__content-left');
+const allRightPanels = document.querySelectorAll('.modal__content--right');
+let hoverTimer = null;
+let currentModal = 'what'; // used this to track which nav section is active
+
+function openModal() {
+  modal.classList.add('is-open');
+}
+
+function closeModal() {
+  modal.classList.remove('is-open');
+}
+
+function showLeft(modalName) {
+  allLeftPanels.forEach(p => p.classList.toggle('is-active', p.dataset.modal === modalName));
+}
+
+function showRight(viewName) {
+  allRightPanels.forEach(p => p.classList.toggle('is-active', p.dataset.view === viewName));
+}
+
+function activateModal(modalName, defaultView) {
+  currentModal = modalName;
+  showLeft(modalName);
+  showRight(defaultView);
+  document.querySelectorAll('.modal__content-left-list-item').forEach(li => li.classList.remove('is-active'));
+}
+
+function scheduleRestore(delay = 180) {
+  clearTimeout(hoverTimer);
+  hoverTimer = setTimeout(() => {
+    const activeLeft = document.querySelector('.modal__content-left.is-active');
+    const anyActiveItem = activeLeft?.querySelector('.modal__content-left-list-item.is-active');
+    if (!anyActiveItem) {
+      if (activeLeft?.dataset.modal === 'what') showRight('overview');
+      else if (activeLeft?.dataset.modal === 'who') showRight('who-overview');
+      else if (activeLeft?.dataset.modal === 'insights') showRight('insights-overview');
+      else if (activeLeft?.dataset.modal === 'careers') showRight('careers-overview');
+    }
+  }, delay);
+}
+
+// left item hover → swap visible right pane
+document.querySelectorAll('.modal__content-left-list-item').forEach(li => {
+  li.addEventListener('mouseenter', () => {
+    clearTimeout(hoverTimer);
+    const parent = li.closest('.modal__content-left');
+    parent.querySelectorAll('.modal__content-left-list-item').forEach(x => x.classList.remove('is-active'));
+    li.classList.add('is-active');
+    showRight(li.dataset.view);
+  });
+
+  li.addEventListener('mouseleave', () => {
+    li.classList.remove('is-active');
+    scheduleRestore(180);
+  });
+});
+
+// keep right pane open while hovered
+allRightPanels.forEach(panel => {
+  panel.addEventListener('mouseenter', () => clearTimeout(hoverTimer));
+  panel.addEventListener('mouseleave', () => scheduleRestore(180));
+});
+
+// "What we do" nav hover
+if (whatWeDoLink && modal) {
+  whatWeDoLink.addEventListener('mouseenter', () => {
+    activateModal('what', 'overview');
+    openModal();
+  });
+
+  whatWeDoLink.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!modal.matches(':hover') && !whatWeDoLink.matches(':hover') && !whoNav?.matches(':hover') && !insightsNav?.matches(':hover') && !careersNav?.matches(':hover')) closeModal();
+    }, 150);
+  });
+}
+
+// "Who we are" nav hover
+if (whoNav && modal) {
+  whoNav.addEventListener('mouseenter', () => {
+    activateModal('who', 'who-overview');
+    openModal();
+  });
+
+  whoNav.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!modal.matches(':hover') && !whoNav.matches(':hover') && !whatWeDoLink?.matches(':hover') && !insightsNav?.matches(':hover') && !careersNav?.matches(':hover')) closeModal();
+    }, 150);
+  });
+}
+
+// "Insights" nav hover
+if (insightsNav && modal) {
+  insightsNav.addEventListener('mouseenter', () => {
+    activateModal('insights', 'insights-overview');
+    openModal();
+  });
+
+  insightsNav.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!modal.matches(':hover') && !insightsNav.matches(':hover') && !whatWeDoLink?.matches(':hover') && !whoNav?.matches(':hover') && !careersNav?.matches(':hover')) closeModal();
+    }, 150);
+  });
+}
+
+// "Careers" nav hover
+if (careersNav && modal) {
+  careersNav.addEventListener('mouseenter', () => {
+    activateModal('careers', 'careers-overview');
+    openModal();
+  });
+
+  careersNav.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!modal.matches(':hover') && !careersNav.matches(':hover') && !whatWeDoLink?.matches(':hover') && !whoNav?.matches(':hover') && !insightsNav?.matches(':hover')) closeModal();
+    }, 150);
+  });
+}
+
+// modal keep open on hover close on leave
+if (modal) {
+  modal.addEventListener('mouseenter', () => {
+    clearTimeout(hoverTimer);
+    openModal();
+  });
+  modal.addEventListener('mouseleave', () => {
+    setTimeout(() => {
+      if (!modal.matches(':hover') && !whatWeDoLink?.matches(':hover') && !whoNav?.matches(':hover') && !insightsNav?.matches(':hover') && !careersNav?.matches(':hover')) {
+        closeModal();
+        activateModal('what', 'overview');
+      }
+    }, 150);
+  });
+}
+
 function openSearch() {
   searchBar.classList.add('is-open');
   searchInput.focus();
