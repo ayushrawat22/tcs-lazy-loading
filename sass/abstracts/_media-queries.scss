@@ -2,9 +2,9 @@
 @use './variables' as *;
 @use './colors' as *;
 @use './mixins' as *;
-
-$breakpoint-md: 1344px;
-$breakpoint-sm: 576px;
+//initially written on laptop in my laptop it is looking good
+$breakpoint-md: 1344px; //checked responsiveness on ipad it is working fine
+$breakpoint-sm: 576px;// checked on phone, working fine
 
 
 @mixin media_query($breakpoint) {
