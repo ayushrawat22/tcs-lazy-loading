@@ -59,12 +59,35 @@
           font-weight: 500;
           // padding: px_to_rem(8px) 0;
           display: inline-block;
-          border-bottom: 2px solid transparent;
-          transition: color .15s ease, border-bottom-color .15s ease;
+          position: relative;
+          padding-bottom: px_to_rem(6px);
+          transition: color .15s ease;
 
-          &:hover {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: px_to_rem(2px);
+            background-image: $gradient;
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            transform-origin: left center;
+            transform: scaleX(0);
+            transition: transform .35s cubic-bezier(0.4, 0, 0.2, 1), background-position .35s ease;
+          }
+
+          &:hover,
+          &:focus-visible {
             color: $white;
-            border-bottom-color: $white;
+          }
+
+          &:hover::after,
+          &:focus-visible::after {
+            transform: scaleX(1);
+            background-position: 100% 50%;
           }
         }
       }
@@ -83,7 +106,7 @@
       &-line {
         width: px_to_rem(24px);
         height: px_to_rem(2px);
-        background-image: $hamburger-gradient;
+        background-image: $gradient;
         background-size: 200% 100%;
         background-repeat: no-repeat;
         border-radius: px_to_rem(2px);
@@ -125,12 +148,35 @@
           letter-spacing: 0.02em;
           padding: px_to_rem(8px) 0;
           display: inline-block;
-          border-bottom: 2px solid transparent;
-          transition: color .15s ease, border-bottom-color .15s ease;
+          position: relative;
+          padding-bottom: px_to_rem(6px);
+          transition: color .15s ease;
 
-          &:hover {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: px_to_rem(2px);
+            background-image: $gradient;
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            transform-origin: left center;
+            transform: scaleX(0);
+            transition: transform .35s cubic-bezier(0.4, 0, 0.2, 1), background-position .35s ease;
+          }
+
+          &:hover,
+          &:focus-visible {
             color: $white;
-            border-bottom-color: $white;
+          }
+
+          &:hover::after,
+          &:focus-visible::after {
+            transform: scaleX(1);
+            background-position: 100% 50%;
           }
         }
       }
@@ -165,7 +211,7 @@
   }
 
   &__search {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -175,7 +221,7 @@
     opacity: 0;
     visibility: hidden;
     transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
-    z-index: 100;
+    z-index: 1300;
 
     &.is-open {
       transform: translateY(0);
