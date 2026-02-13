@@ -114,12 +114,10 @@ let currentModal = 'what'; // used this to track which nav section is active
 
 function openModal() {
   modal.classList.add('is-open');
-  document.body.classList.add('no-scroll');
 }
 
 function closeModal() {
   modal.classList.remove('is-open');
-  if (!document.querySelector('.nav__sidebar.is-open')) document.body.classList.remove('no-scroll');
 }
 
 function showLeft(modalName) {
@@ -333,7 +331,26 @@ const selectors = document.querySelectorAll('.selectors__wrapper--cta');
 fetch("./cards.json")
   .then(response => response.json())
   .then(data => {
-    cardsArr = data.cards;
+    const originalCards = data.cards;
+    cardsArr = [];
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < originalCards.length; j++) {
+        const card = originalCards[j];
+        const cardNumber = (i * originalCards.length) + j + 1;
+        
+        const newCard = {
+          id: "card-" + cardNumber,
+          title: card.title,
+          description: card.description,
+          category: card.category,
+          image: card.image,
+          link: card.link
+        };
+        
+        cardsArr.push(newCard);
+      }
+    }
+    
     filteredCards = cardsArr;
 
     selectors[0].classList.add("active");

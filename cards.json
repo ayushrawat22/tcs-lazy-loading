@@ -1,4 +1,4 @@
-{
+﻿{
     "sectionId": "cards",
     "cards": [
         {
@@ -14,10 +14,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
-
         {
             "id": "card-2",
             "title": "TCS Systech Partner Serialization Solutions Life Sciences",
@@ -31,7 +28,6 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
         {
             "id": "card-3",
@@ -46,10 +42,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
-
         {
             "id": "card-4",
             "title": "TCS interactive Life Sciences on MM&M Top 100 List",
@@ -63,10 +56,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
-
         {
             "id": "card-5",
             "title": "The TCS Recipe for Corporate Social Responsibility (CSR) Success",
@@ -80,10 +70,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
-
         {
             "id": "card-6",
             "title": "TCS CMC Amalgation",
@@ -97,10 +84,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
-
         {
             "id": "card-7",
             "title": "TCS Corporate Governance | Board of Directors | Leadership team",
@@ -114,9 +98,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-        
         {
             "id": "card-8",
             "title": "Everest group names TCS a leader in healthcare analytics service",
@@ -130,9 +112,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
         {
             "id": "card-9",
             "title": "TCS Cloud Migration Services on Google Cloud for Secure Migration",
@@ -146,9 +126,7 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
         {
             "id": "card-10",
             "title": "TCS Recognized a Leader in Managed Multicloud Services",
@@ -162,13 +140,11 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
         },
-
         {
             "id": "card-11",
             "title": "TCS And GE Partner to Enable Healthcare Industry Transformation",
-            "description": " TCS announced that as a strategic partner of GE Healthcare and GE Digital (NYSE: GE), it will develop innovative digital solutions on the GE Health Cloud to deliver benefits to its customers across the healthcare industry.",
+            "description": "TCS announced that as a strategic partner of GE Healthcare and GE Digital (NYSE: GE), it will develop innovative digital solutions on the GE Health Cloud to deliver benefits to its customers across the healthcare industry.",
             "category": "research",
             "image":{
                 "src":"./assets/cards/card11.webp",
@@ -178,546 +154,6 @@
                 "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
                 "text": "Watch Now"
             }
-
-        },
-        {
-            "id": "card-12",
-            "title": "TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster",
-            "description": "TCS InQuizitive videos show how students performed in the quarter, semifinal, and national final rounds. Watch all the school quiz competition videos here.",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card1.png",
-                "alt":"TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-13",
-            "title": "TCS Systech Partner Serialization Solutions Life Sciences",
-            "description": "Systech International announces its partnership with TCS to supply the life sciences industry with an effective and economic means of implementing their serialization programs.",
-            "category": "news",
-            "image":{
-                "src":"./assets/cards/card2.png",
-                "alt":"TCS Systech Partner Serialization Solutions Life Sciences"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        {
-            "id": "card-14",
-            "title": "TCS Efficient Cloud Operations with AWS cloud Solutions",
-            "description": "Power up your enterprise cloud journey and run a seamless cloud operations framework with TCS' AI-enabled cloud operations platform. Explore now.",
-            "category": "production",
-            "image":{
-                "src":"./assets/cards/card3.png",
-                "alt":"TCS Efficient Cloud Operations with AWS cloud Solutions"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-15",
-            "title": "TCS interactive Life Sciences on MM&M Top 100 List",
-            "description": "Every year MM&M magazine ranks the top 100 pharmaceutical marketing companies by revenue. TCS interactive Life Sciences is honored to be named to that list.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card4.png",
-                "alt":"TCS interactive Life Sciences on MM&M Top 100 List"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-16",
-            "title": "The TCS Recipe for Corporate Social Responsibility (CSR) Success",
-            "description": "In a recent interview with Inside HR, Deborah Hadwen, CEO, TCS ANZ, discusses TCS' CSR approach, strategies and success in Australia",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card5.png",
-                "alt":"The TCS Recipe for Corporate Social Responsibility (CSR) Success"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-17",
-            "title": "TCS CMC Amalgation",
-            "description": "Approved Scheme of Amalgamation between Tata Consultancy Services Ltd. (TCS) and CMC Ltd. (CMC)",
-            "category":"news",
-            "image":{
-                "src":"./assets/cards/card6.png",
-                "alt":"TCS CMC Amalgation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-18",
-            "title": "TCS Corporate Governance | Board of Directors | Leadership team",
-            "description": "Learn more about TCS Corporate Governance policies. Meet our chairman N. Chandrasekaran, Board of Directors and browse through key Compliance Reports.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card7.png",
-                "alt":"TCS Corporate Governance | Board of Directors | Leadership team"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        
-        {
-            "id": "card-19",
-            "title": "Everest group names TCS a leader in healthcare analytics service",
-            "description": "Everest group recognized TCS as a leader in healthcare analytics services for its data-drivendecision-making capabilities and leveraging advanced analytics.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card8.png",
-                "alt":"Everest group names TCS a leader in healthcare analytics service"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-20",
-            "title": "TCS Cloud Migration Services on Google Cloud for Secure Migration",
-            "description": "As businesses embark on application modernization and cloud transformation journeys,TCS' solution helps reduce migration timelines and unlock better value.",
-            "category": "news",
-            "image":{
-                "src":"./assets/cards/card9.jpg",
-                "alt":"TCS Cloud Migration Services on Google Cloud for Secure Migration"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-21",
-            "title": "TCS Recognized a Leader in Managed Multicloud Services",
-            "description": "Crediting its strengths in hybrid cloud strategy & enterprise automation, IDC has named TCS a leader in MarketScape Worldwide Managed Multicloud Services.",
-            "category": "production",
-            "image":{
-                "src":"./assets/cards/card10.webp",
-                "alt":"TCS Recognized a Leader in Managed Multicloud Services"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-22",
-            "title": "TCS And GE Partner to Enable Healthcare Industry Transformation",
-            "description": " TCS announced that as a strategic partner of GE Healthcare and GE Digital (NYSE: GE), it will develop innovative digital solutions on the GE Health Cloud to deliver benefits to its customers across the healthcare industry.",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card11.webp",
-                "alt":"TCS And GE Partner to Enable Healthcare Industry Transformation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        {
-            "id": "card-23",
-            "title": "TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster",
-            "description": "TCS InQuizitive videos show how students performed in the quarter, semifinal, and national final rounds. Watch all the school quiz competition videos here.",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card1.png",
-                "alt":"TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-24",
-            "title": "TCS Systech Partner Serialization Solutions Life Sciences",
-            "description": "Systech International announces its partnership with TCS to supply the life sciences industry with an effective and economic means of implementing their serialization programs.",
-            "category": "news",
-            "image":{
-                "src":"./assets/cards/card2.png",
-                "alt":"TCS Systech Partner Serialization Solutions Life Sciences"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        {
-            "id": "card-25",
-            "title": "TCS Efficient Cloud Operations with AWS cloud Solutions",
-            "description": "Power up your enterprise cloud journey and run a seamless cloud operations framework with TCS' AI-enabled cloud operations platform. Explore now.",
-            "category": "production",
-            "image":{
-                "src":"./assets/cards/card3.png",
-                "alt":"TCS Efficient Cloud Operations with AWS cloud Solutions"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-26",
-            "title": "TCS interactive Life Sciences on MM&M Top 100 List",
-            "description": "Every year MM&M magazine ranks the top 100 pharmaceutical marketing companies by revenue. TCS interactive Life Sciences is honored to be named to that list.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card4.png",
-                "alt":"TCS interactive Life Sciences on MM&M Top 100 List"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-27",
-            "title": "The TCS Recipe for Corporate Social Responsibility (CSR) Success",
-            "description": "In a recent interview with Inside HR, Deborah Hadwen, CEO, TCS ANZ, discusses TCS' CSR approach, strategies and success in Australia",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card5.png",
-                "alt":"The TCS Recipe for Corporate Social Responsibility (CSR) Success"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-28",
-            "title": "TCS CMC Amalgation",
-            "description": "Approved Scheme of Amalgamation between Tata Consultancy Services Ltd. (TCS) and CMC Ltd. (CMC)",
-            "category":"news",
-            "image":{
-                "src":"./assets/cards/card6.png",
-                "alt":"TCS CMC Amalgation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-29",
-            "title": "TCS Corporate Governance | Board of Directors | Leadership team",
-            "description": "Learn more about TCS Corporate Governance policies. Meet our chairman N. Chandrasekaran, Board of Directors and browse through key Compliance Reports.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card7.png",
-                "alt":"TCS Corporate Governance | Board of Directors | Leadership team"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        
-        {
-            "id": "card-30",
-            "title": "Everest group names TCS a leader in healthcare analytics service",
-            "description": "Everest group recognized TCS as a leader in healthcare analytics services for its data-drivendecision-making capabilities and leveraging advanced analytics.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card8.png",
-                "alt":"Everest group names TCS a leader in healthcare analytics service"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-31",
-            "title": "TCS Cloud Migration Services on Google Cloud for Secure Migration",
-            "description": "As businesses embark on application modernization and cloud transformation journeys,TCS' solution helps reduce migration timelines and unlock better value.",
-            "category": "news",
-            "image":{
-                "src":"./assets/cards/card9.jpg",
-                "alt":"TCS Cloud Migration Services on Google Cloud for Secure Migration"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-32",
-            "title": "TCS Recognized a Leader in Managed Multicloud Services",
-            "description": "Crediting its strengths in hybrid cloud strategy & enterprise automation, IDC has named TCS a leader in MarketScape Worldwide Managed Multicloud Services.",
-            "category": "production",
-            "image":{
-                "src":"./assets/cards/card10.webp",
-                "alt":"TCS Recognized a Leader in Managed Multicloud Services"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-33",
-            "title": "TCS And GE Partner to Enable Healthcare Industry Transformation",
-            "description": " TCS announced that as a strategic partner of GE Healthcare and GE Digital (NYSE: GE), it will develop innovative digital solutions on the GE Health Cloud to deliver benefits to its customers across the healthcare industry.",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card11.webp",
-                "alt":"TCS And GE Partner to Enable Healthcare Industry Transformation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        {
-            "id": "card-34",
-            "title": "TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster",
-            "description": "TCS InQuizitive videos show how students performed in the quarter, semifinal, and national final rounds. Watch all the school quiz competition videos here.",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card1.png",
-                "alt":"TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-35",
-            "title": "TCS Systech Partner Serialization Solutions Life Sciences",
-            "description": "Systech International announces its partnership with TCS to supply the life sciences industry with an effective and economic means of implementing their serialization programs.",
-            "category": "news",
-            "image":{
-                "src":"./assets/cards/card2.png",
-                "alt":"TCS Systech Partner Serialization Solutions Life Sciences"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        {
-            "id": "card-36",
-            "title": "TCS Efficient Cloud Operations with AWS cloud Solutions",
-            "description": "Power up your enterprise cloud journey and run a seamless cloud operations framework with TCS' AI-enabled cloud operations platform. Explore now.",
-            "category": "production",
-            "image":{
-                "src":"./assets/cards/card3.png",
-                "alt":"TCS Efficient Cloud Operations with AWS cloud Solutions"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-37",
-            "title": "TCS interactive Life Sciences on MM&M Top 100 List",
-            "description": "Every year MM&M magazine ranks the top 100 pharmaceutical marketing companies by revenue. TCS interactive Life Sciences is honored to be named to that list.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card4.png",
-                "alt":"TCS interactive Life Sciences on MM&M Top 100 List"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-38",
-            "title": "The TCS Recipe for Corporate Social Responsibility (CSR) Success",
-            "description": "In a recent interview with Inside HR, Deborah Hadwen, CEO, TCS ANZ, discusses TCS' CSR approach, strategies and success in Australia",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card5.png",
-                "alt":"The TCS Recipe for Corporate Social Responsibility (CSR) Success"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-39",
-            "title": "TCS CMC Amalgation",
-            "description": "Approved Scheme of Amalgamation between Tata Consultancy Services Ltd. (TCS) and CMC Ltd. (CMC)",
-            "category":"news",
-            "image":{
-                "src":"./assets/cards/card6.png",
-                "alt":"TCS CMC Amalgation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-
-        {
-            "id": "card-40",
-            "title": "TCS Corporate Governance | Board of Directors | Leadership team",
-            "description": "Learn more about TCS Corporate Governance policies. Meet our chairman N. Chandrasekaran, Board of Directors and browse through key Compliance Reports.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card7.png",
-                "alt":"TCS Corporate Governance | Board of Directors | Leadership team"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-        
-        {
-            "id": "card-41",
-            "title": "Everest group names TCS a leader in healthcare analytics service",
-            "description": "Everest group recognized TCS as a leader in healthcare analytics services for its data-drivendecision-making capabilities and leveraging advanced analytics.",
-            "category": "blog",
-            "image":{
-                "src":"./assets/cards/card8.png",
-                "alt":"Everest group names TCS a leader in healthcare analytics service"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-42",
-            "title": "TCS Cloud Migration Services on Google Cloud for Secure Migration",
-            "description": "As businesses embark on application modernization and cloud transformation journeys,TCS' solution helps reduce migration timelines and unlock better value.",
-            "category": "news",
-            "image":{
-                "src":"./assets/cards/card9.jpg",
-                "alt":"TCS Cloud Migration Services on Google Cloud for Secure Migration"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-43",
-            "title": "TCS Recognized a Leader in Managed Multicloud Services",
-            "description": "Crediting its strengths in hybrid cloud strategy & enterprise automation, IDC has named TCS a leader in MarketScape Worldwide Managed Multicloud Services.",
-            "category": "production",
-            "image":{
-                "src":"./assets/cards/card10.webp",
-                "alt":"TCS Recognized a Leader in Managed Multicloud Services"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
-        },
-
-        {
-            "id": "card-44",
-            "title": "TCS And GE Partner to Enable Healthcare Industry Transformation",
-            "description": " TCS announced that as a strategic partner of GE Healthcare and GE Digital (NYSE: GE), it will develop innovative digital solutions on the GE Health Cloud to deliver benefits to its customers across the healthcare industry.",
-            "category": "research",
-            "image":{
-                "src":"./assets/cards/card11.webp",
-                "alt":"TCS And GE Partner to Enable Healthcare Industry Transformation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
-            }
-
         }
-
-
     ]
 }
