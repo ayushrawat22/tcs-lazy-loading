@@ -343,8 +343,7 @@ fetch("./cards.json")
           title: card.title,
           description: card.description,
           category: card.category,
-          image: card.image,
-          link: card.link
+          image: card.image
         };
         
         cardsArr.push(newCard);

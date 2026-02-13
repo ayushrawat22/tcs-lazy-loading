@@ -9,10 +9,6 @@
             "image":{
                 "src":"./assets/cards/card1.png",
                 "alt":"TCS InQuiizitive: Watch Quiz videos of Students and QuizMaster"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -23,10 +19,6 @@
             "image":{
                 "src":"./assets/cards/card2.png",
                 "alt":"TCS Systech Partner Serialization Solutions Life Sciences"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -37,10 +29,6 @@
             "image":{
                 "src":"./assets/cards/card3.png",
                 "alt":"TCS Efficient Cloud Operations with AWS cloud Solutions"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -51,10 +39,6 @@
             "image":{
                 "src":"./assets/cards/card4.png",
                 "alt":"TCS interactive Life Sciences on MM&M Top 100 List"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -65,10 +49,6 @@
             "image":{
                 "src":"./assets/cards/card5.png",
                 "alt":"The TCS Recipe for Corporate Social Responsibility (CSR) Success"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -79,10 +59,6 @@
             "image":{
                 "src":"./assets/cards/card6.png",
                 "alt":"TCS CMC Amalgation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -93,10 +69,6 @@
             "image":{
                 "src":"./assets/cards/card7.png",
                 "alt":"TCS Corporate Governance | Board of Directors | Leadership team"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -107,10 +79,6 @@
             "image":{
                 "src":"./assets/cards/card8.png",
                 "alt":"Everest group names TCS a leader in healthcare analytics service"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -121,10 +89,6 @@
             "image":{
                 "src":"./assets/cards/card9.jpg",
                 "alt":"TCS Cloud Migration Services on Google Cloud for Secure Migration"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -135,10 +99,6 @@
             "image":{
                 "src":"./assets/cards/card10.webp",
                 "alt":"TCS Recognized a Leader in Managed Multicloud Services"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         },
         {
@@ -149,10 +109,6 @@
             "image":{
                 "src":"./assets/cards/card11.webp",
                 "alt":"TCS And GE Partner to Enable Healthcare Industry Transformation"
-            },
-            "link": {
-                "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-                "text": "Watch Now"
             }
         }
     ]
