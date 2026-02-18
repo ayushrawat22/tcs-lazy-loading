@@ -2,6 +2,7 @@ const searchIcon = document.querySelector('.nav__wrapper--rightcontent-search');
 const searchBar = document.querySelector('.nav__search');
 const closeButton = document.querySelector('.nav__search-close');
 const searchInput = document.querySelector('.nav__search-input');
+const searchSuggestions = document.querySelector('.nav__search-suggestions');
 
 // Hamburger / sidebar toggle
 const hamburger = document.querySelector('.nav__wrapper--hamburger');
@@ -29,6 +30,7 @@ const sidebarItems = document.querySelectorAll('.nav__sidebar-list-item');
 sidebarItems.forEach(item => {
   const link = item.querySelector('.nav__sidebar-list-link');
   const sub = item.querySelector('.nav__sidebar-sub');
+  if (sub) item.classList.add('has-sub');
 
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -51,7 +53,6 @@ sidebarItems.forEach(item => {
     if (item.classList.contains('is-expanded')) {
       sub.style.maxHeight = sub.scrollHeight + 'px';
     } else {
-      // collapse all sub-items inside
       item.querySelectorAll('.nav__sidebar-sub-item.is-expanded').forEach(si => {
         si.classList.remove('is-expanded');
         const sc = si.querySelector('.nav__sidebar-sub-content');
@@ -67,6 +68,7 @@ const subItems = document.querySelectorAll('.nav__sidebar-sub-item');
 subItems.forEach(subItem => {
   const subLink = subItem.querySelector('.nav__sidebar-sub-link');
   const subContent = subItem.querySelector('.nav__sidebar-sub-content');
+  if (subContent) subItem.classList.add('has-content');
 
   subLink.addEventListener('click', (e) => {
     e.preventDefault();
@@ -168,7 +170,7 @@ allRightPanels.forEach(panel => {
   panel.addEventListener('mouseleave', () => scheduleRestore(180));
 });
 
-// "What we do" nav hover
+// What we do nav hover
 if (whatWeDoLink && modal) {
   whatWeDoLink.addEventListener('mouseenter', () => {
     activateModal('what', 'overview');
@@ -182,7 +184,7 @@ if (whatWeDoLink && modal) {
   });
 }
 
-// "Who we are" nav hover
+// Who we are nav hover
 if (whoNav && modal) {
   whoNav.addEventListener('mouseenter', () => {
     activateModal('who', 'who-overview');
@@ -196,7 +198,7 @@ if (whoNav && modal) {
   });
 }
 
-// "Insights" nav hover
+// Insights nav hover
 if (insightsNav && modal) {
   insightsNav.addEventListener('mouseenter', () => {
     activateModal('insights', 'insights-overview');
@@ -210,7 +212,7 @@ if (insightsNav && modal) {
   });
 }
 
-// "Careers" nav hover
+// Careers nav hover
 if (careersNav && modal) {
   careersNav.addEventListener('mouseenter', () => {
     activateModal('careers', 'careers-overview');
@@ -266,51 +268,93 @@ function debounce(func, delay) {
   };
 }
 
-function searchCards(query) {
-  if (!cardsArr || !cardsArr.length) return;
+function applyFilters() {
+  const query = searchInput.value.trim().toLowerCase();
 
-  const text = String(query || "").trim().toLowerCase();
-
-  if (!text) {
-    filteredCards = cardsArr;
-
-    selectors.forEach(btn => btn.classList.remove("active"));
-    selectors[0].classList.add("active");
-  } else {
-    filteredCards = cardsArr.filter(card => {
-      const title = (card.title || "").toLowerCase();
-      const description = (card.description || "").toLowerCase();
-      const category = (card.category || "").toLowerCase();
-
-      return (
-        title.includes(text) ||
-        description.includes(text) ||
-        category.includes(text)
-      );
+  let activeCategories = [];
+  if (selectors) {
+    selectors.forEach(btn => {
+      if (btn.classList.contains("active") && btn.textContent.trim().toLowerCase() !== "all") {
+        activeCategories.push(btn.textContent.trim().toLowerCase());
+      }
     });
-
-    selectors.forEach(btn => btn.classList.remove("active"));
   }
 
+  filteredCards = cardsArr.filter(card => {
+    const cardCategory = (card.category || "").toLowerCase();
+    const cardTitle = (card.title || "").toLowerCase();
+    const cardDesc = (card.description || "").toLowerCase();
+
+    const matchesCategory = activeCategories.length === 0 || activeCategories.includes(cardCategory);
+    const matchesQuery = !query || (
+      cardTitle.includes(query) ||
+      cardDesc.includes(query) ||
+      cardCategory.includes(query)
+    );
+
+    return matchesCategory && matchesQuery;
+  });
+
   temp = 0;
-  cardsload.innerHTML = ""; //RESET LAZY LOADING
+  cardsload.innerHTML = "";
 
   if (filteredCards.length === 0) {
     cardsload.innerHTML = '<p class="no-results">No results found</p>';
-    observer.disconnect();
+    if (observer) observer.disconnect();
+  } else {
+    if (observer && observerTarget) observer.observe(observerTarget);
+    renderNewCards();
+  }
+}
+
+function updateSuggestions(query) {
+  if (!query) {
+    searchSuggestions.innerHTML = '';
+    searchSuggestions.classList.remove('has-results');
     return;
   }
 
-  observer.observe(observerTarget);
-  renderNewCards();
+  const maxSuggestions = 5;
+  const topMatches = filteredCards.slice(0, maxSuggestions);
+
+  if (topMatches.length === 0) {
+    searchSuggestions.innerHTML = '';
+    searchSuggestions.classList.remove('has-results');
+    return;
+  }
+
+  const html = topMatches.map(card => `
+    <div class="nav__search-suggestions-item" data-title="${card.title}">
+      <span class="nav__search-suggestions-item-title">${card.title}</span>
+    </div>
+  `).join('');
+
+  searchSuggestions.innerHTML = html;
+  searchSuggestions.classList.add('has-results');
+
+  searchSuggestions.querySelectorAll('.nav__search-suggestions-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      const title = item.dataset.title;
+      searchInput.value = title;
+      updateSuggestions(null);
+      applyFilters();
+    });
+  });
 }
 
 const handleSearch = debounce(e => {
-  searchCards(e.target.value);
+  applyFilters();
+  updateSuggestions(e.target.value.trim().toLowerCase());
 }, 120);
 
 if (searchInput) {
   searchInput.addEventListener("input", handleSearch);
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav__search-inner')) {
+      updateSuggestions(null);
+    }
+  });
 }
 
 
@@ -335,7 +379,7 @@ fetch("./cards.json")
       for (let j = 0; j < originalCards.length; j++) {
         const card = originalCards[j];
         const cardNumber = (i * originalCards.length) + j + 1;
-        
+
         const newCard = {
           id: "card-" + cardNumber,
           title: card.title,
@@ -343,11 +387,11 @@ fetch("./cards.json")
           category: card.category,
           image: card.image
         };
-        
+
         cardsArr.push(newCard);
       }
     }
-    
+
     filteredCards = cardsArr;
 
     selectors[0].classList.add("active");
@@ -375,42 +419,28 @@ function renderNewCards() {
 
 selectors.forEach(selector => {
   selector.addEventListener("click", () => {
+    searchInput.value = "";
+    updateSuggestions(null);
 
     const clickedText = selector.textContent.trim().toLowerCase();
 
     if (clickedText === "all") {
       selectors.forEach(btn => btn.classList.remove("active"));
       selector.classList.add("active");
-      filteredCards = cardsArr;
     } else {
       selectors[0].classList.remove("active");
       selector.classList.toggle("active");
 
-      const activeCategories = Array.from(selectors)
-        .filter(btn =>
-          btn.classList.contains("active") &&
-          btn.textContent.trim().toLowerCase() !== "all"
-        )
-        .map(btn => btn.textContent.trim().toLowerCase());
+      const anyActive = Array.from(selectors).some(btn =>
+        btn.classList.contains("active") && btn.textContent.trim().toLowerCase() !== "all"
+      );
 
-      if (activeCategories.length === 4) {
-        selectors.forEach(btn => btn.classList.remove("active"));
+      if (!anyActive) {
         selectors[0].classList.add("active");
-        filteredCards = cardsArr;
-      } else if (activeCategories.length === 0) {
-        selectors[0].classList.add("active");
-        filteredCards = cardsArr;
-      } else {
-        filteredCards = cardsArr.filter(card =>
-          activeCategories.includes(card.category.toLowerCase())
-        );
       }
     }
 
-    temp = 0;
-    cardsload.innerHTML = "";
-    observer.observe(observerTarget);
-    renderNewCards();
+    applyFilters();
   });
 });
 

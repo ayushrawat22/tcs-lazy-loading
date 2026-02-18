@@ -60,14 +60,21 @@
     &__wrapper {
       margin: px_to_rem(10px) px_to_rem(12px);
       gap: px_to_rem(8px);
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       &--cta {
         padding: px_to_rem(6px) px_to_rem(10px);
         font-size: px_to_rem(13px);
         height: auto;
         min-width: px_to_rem(80px);
+        flex-shrink: 0;
+        white-space: nowrap;
       }
     }
   }
