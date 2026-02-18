@@ -80,12 +80,14 @@
           }
 
           &:hover,
-          &:focus-visible {
+          &:focus-visible,
+          &.is-active {
             color: $white;
           }
 
           &:hover::after,
-          &:focus-visible::after {
+          &:focus-visible::after,
+          &.is-active::after {
             transform: scaleX(1);
             background-position: 100% 50%;
           }

@@ -93,10 +93,10 @@ a:hover {
   transform: scaleX(0);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-position 0.35s ease;
 }
-.nav__wrapper--leftlinks-list-content:hover, .nav__wrapper--leftlinks-list-content:focus-visible {
+.nav__wrapper--leftlinks-list-content:hover, .nav__wrapper--leftlinks-list-content:focus-visible, .nav__wrapper--leftlinks-list-content.is-active {
   color: #ffffff;
 }
-.nav__wrapper--leftlinks-list-content:hover::after, .nav__wrapper--leftlinks-list-content:focus-visible::after {
+.nav__wrapper--leftlinks-list-content:hover::after, .nav__wrapper--leftlinks-list-content:focus-visible::after, .nav__wrapper--leftlinks-list-content.is-active::after {
   transform: scaleX(1);
   background-position: 100% 50%;
 }

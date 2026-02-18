@@ -71,6 +71,7 @@ subItems.forEach(subItem => {
   if (subContent) subItem.classList.add('has-content');
 
   subLink.addEventListener('click', (e) => {
+    if (!subContent) return;
     e.preventDefault();
 
     const parentSub = subItem.closest('.nav__sidebar-sub');
@@ -112,12 +113,26 @@ const allRightPanels = document.querySelectorAll('.modal__content--right');
 let hoverTimer = null;
 let currentModal = 'what'; // used this to track which nav section is active
 
+const navLinksMap = {
+  'what': whatWeDoLink,
+  'who': whoNav,
+  'insights': insightsNav,
+  'careers': careersNav
+};
+
+function clearActiveNavLinks() {
+  document.querySelectorAll('.nav__wrapper--leftlinks-list-content').forEach(link => {
+    link.classList.remove('is-active');
+  });
+}
+
 function openModal() {
   modal.classList.add('is-open');
 }
 
 function closeModal() {
   modal.classList.remove('is-open');
+  clearActiveNavLinks();
 }
 
 function showLeft(modalName) {
@@ -132,6 +147,14 @@ function activateModal(modalName, defaultView) {
   currentModal = modalName;
   showLeft(modalName);
   showRight(defaultView);
+
+  clearActiveNavLinks();
+  const activeNavItem = navLinksMap[modalName];
+  if (activeNavItem) {
+    const link = activeNavItem.querySelector('.nav__wrapper--leftlinks-list-content');
+    if (link) link.classList.add('is-active');
+  }
+
   document.querySelectorAll('.modal__content-left-list-item').forEach(li => li.classList.remove('is-active'));
 }
 
