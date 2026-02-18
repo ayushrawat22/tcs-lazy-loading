@@ -4,39 +4,41 @@
 @use '../abstracts/media-queries' as *;
 @use '../abstracts/mixins' as *;
 
-.selectors{
-    border-bottom: 2px solid $grey-200;
+.selectors {
+  border-bottom: 2px solid $grey-200;
 
-    &__wrapper{
-    margin: px_to_rem(14px) px_to_rem(100px);
+  &__wrapper {
+    margin: px_to_rem(14px) px_to_rem(0px);
+    padding-left: px_to_rem(100px);
+    padding-right: px_to_rem(100px);
     @include center;
     justify-content: space-around;
     gap: px_to_rem(100px);
 
-    &--cta{
-        list-style: none;
-        font-family: $font-one;
-        color: $white;
-        border: 2px solid $white;
-        border-radius: px_to_rem(20px);
-        padding: px_to_rem(8px) px_to_rem(16px);
-        height: px_to_rem(35px);
-        width: px_to_rem(120px);
-        text-align: center;
-        cursor: pointer;
-        transition: background-color .3s ease, color .3s ease;
+    &--cta {
+      list-style: none;
+      font-family: $font-one;
+      color: $white;
+      border: 2px solid $white;
+      border-radius: px_to_rem(20px);
+      padding: px_to_rem(8px) px_to_rem(16px);
+      height: px_to_rem(35px);
+      width: px_to_rem(120px);
+      text-align: center;
+      cursor: pointer;
+      transition: background-color .3s ease, color .3s ease;
 
-        &:hover{
-            background-color: $white;
-            color: $black;
-        }
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
 
-        &.active{
-            background-color: $white;
-            color: $black;
-        }
+      &.active {
+        background-color: $white;
+        color: $black;
+      }
     }
-}
+  }
 
   @include media_query('md') {
     &__wrapper {

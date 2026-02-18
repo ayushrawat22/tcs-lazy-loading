@@ -21,15 +21,17 @@
 .card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: px_to_rem(16px);
   padding: px_to_rem(32px);
   width: 100%;
+  padding-left: px_to_rem(100px);
 
   &__content {
     @include flex-column;
     max-width: px_to_rem(720px);
     gap: px_to_rem(8px);
+    padding-left: px_to_rem(64.5px);
   }
 
   &__title {
@@ -94,6 +96,7 @@
 
     &__content {
       gap: px_to_rem(4px);
+      padding-left: px_to_rem(8px);
     }
   }
 }

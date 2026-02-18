@@ -29,7 +29,6 @@ const sidebarItems = document.querySelectorAll('.nav__sidebar-list-item');
 sidebarItems.forEach(item => {
   const link = item.querySelector('.nav__sidebar-list-link');
   const sub = item.querySelector('.nav__sidebar-sub');
-  if (!link || !sub) return;
 
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -68,7 +67,6 @@ const subItems = document.querySelectorAll('.nav__sidebar-sub-item');
 subItems.forEach(subItem => {
   const subLink = subItem.querySelector('.nav__sidebar-sub-link');
   const subContent = subItem.querySelector('.nav__sidebar-sub-content');
-  if (!subLink || !subContent) return;
 
   subLink.addEventListener('click', (e) => {
     e.preventDefault();
@@ -295,7 +293,7 @@ function searchCards(query) {
   }
 
   temp = 0;
-  cardsload.innerHTML = "";
+  cardsload.innerHTML = ""; //RESET LAZY LOADING
 
   if (filteredCards.length === 0) {
     cardsload.innerHTML = '<p class="no-results">No results found</p>';
